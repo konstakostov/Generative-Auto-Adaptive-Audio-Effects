@@ -1,7 +1,7 @@
 import os
 
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 DATA_DIR = os.path.join(PROJECT_ROOT, "Data")
 
@@ -15,7 +15,6 @@ EFFECTS_DELAY_DIR = os.path.join(EFFECTS_DIR, "Delay_Effect")
 
 METADATA_DIR = os.path.join(PROJECT_ROOT, "Metadata")
 METADATA_DELAY_DIR = os.path.join(METADATA_DIR, "Delay_Metadata")
-METADATA_DELAY_OUTPUT = os.path.join(METADATA_DELAY_DIR, "delay_metadata.json")
 
 
 MODELS_DIR = os.path.join(PROJECT_ROOT, "Models")

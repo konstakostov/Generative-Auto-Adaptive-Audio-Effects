@@ -5,21 +5,15 @@ import numpy as np
 import soundfile as sf
 from tqdm import tqdm
 
-from Effects.perlin_noise import generate_perlin_noise_sequence
-from Effects.audio_effects import DelayEffect
+from Audio_Effects.generate_perlin_noise import generate_perlin_noise_sequence
+from Audio_Effects.audio_effects_classes import DelayEffect
+from Utils.Constants.variable_constants import DELAY_STATES_TIMES
 
 # Set the number of segments to split the audio into
 SEGMENT_COUNT = 10
 
 # Define the delay times for different states
-DELAY_STATES_TIMES = {
-    # Short State (20ms - 79ms), Generated 31 values
-    "short": [round(0.001 * x, 3) for x in range(20, 80, 2)],
-    # Medium State (80ms - 349ms), Generated 28 values
-    "medium": [round(0.001 * x, 3) for x in range(80, 350, 10)],
-    # Long State (350ms - 1500ms), Generated 30 values
-    "long": [round(0.001 * x, 3) for x in range(350, 1501, 40)],
-}
+delay_state_times = DELAY_STATES_TIMES
 
 # Thresholds for mapping Perlin noise values to delay states:
 # Values below 0.33 map to "short", between 0.33 and 0.66 to "medium", and above 0.66 to "long".
@@ -86,7 +80,7 @@ def process_data_delay_effect(input_dir, output_dir):
                 state = "long"
 
             # Select a delay time for the current state
-            state_times = DELAY_STATES_TIMES[state]
+            state_times = delay_state_times[state]
             delay_noise = generate_perlin_noise_sequence(SEGMENT_COUNT, scale=0.4, seed=None)
             delay_idx = int(delay_noise[i] * len(state_times)) % len(state_times)
             delay_time = state_times[delay_idx]

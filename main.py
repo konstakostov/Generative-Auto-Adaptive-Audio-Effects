@@ -13,9 +13,12 @@ from Utils.Constants.path_constants import (
 from Utils.Process_Audio_Input.process_mic_input import process_mic_input
 from Utils.Process_Audio_Input.process_wav_input import process_wav_input
 
-# Input and output audio file names for processing
-input_audio_file_name = "sample_guitar_01.wav"  # Name of the input audio file
-output_audio_file_name = f"{input_audio_file_name}_005.wav"  # Name of the output audio file
+# Input audio file name to be processed
+input_audio_file_name = "sample_guitar_01.wav"
+# Extracts the base name (without extension) from the input audio file
+base_name = os.path.splitext(input_audio_file_name)[0]
+# Output audio file name after processing, with a suffix indicating the effect/version
+output_audio_file_name = f"{base_name}_005.wav"
 
 # Name and path for the transition matrix used in generative adaptive delay
 transition_matrix_name = "matrix_delay_run_2025.08.04.16.44.41_001.npy"  # Transition matrix file name

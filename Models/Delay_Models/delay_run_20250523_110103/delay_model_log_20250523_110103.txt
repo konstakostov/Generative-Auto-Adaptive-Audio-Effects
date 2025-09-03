@@ -1,0 +1,34 @@
+Successfully loaded metadata with 6900 entries
+Feature dimension: 33
+Training samples: 5520
+Validation samples: 1380
+Feature space PCA plot saved to the specified path.
+Starting training from scratch
+Epoch 0/600, Train Loss: 1.12112122, Val Loss: 1.05462242, LR: 0.00100000
+Epoch 10/600, Train Loss: 1.02672003, Val Loss: 0.99908045, LR: 0.00100000
+Epoch 20/600, Train Loss: 1.01322703, Val Loss: 0.99464652, LR: 0.00100000
+Epoch 30/600, Train Loss: 1.00121733, Val Loss: 0.98490256, LR: 0.00100000
+Epoch 40/600, Train Loss: 1.00387236, Val Loss: 0.98110808, LR: 0.00100000
+Epoch 50/600, Train Loss: 1.00187501, Val Loss: 0.99378069, LR: 0.00100000
+Epoch 60/600, Train Loss: 0.99542889, Val Loss: 0.98720799, LR: 0.00100000
+Epoch 70/600, Train Loss: 0.99417391, Val Loss: 0.98402073, LR: 0.00100000
+Epoch 80/600, Train Loss: 1.00063232, Val Loss: 0.98526923, LR: 0.00100000
+Epoch 90/600, Train Loss: 0.98369862, Val Loss: 0.98154308, LR: 0.00050000
+Early stopping at epoch 96
+Loss curves saved to the specified path.
+Training accuracy: 0.4942
+Validation accuracy: 0.4478
+Transition matrix:
+[[0.30845457 0.41636124 0.27518421]
+ [0.26752174 0.45783651 0.27464172]
+ [0.27562031 0.42717734 0.29720247]]
+
+The transition matrix is saved to the specified path.
+The full model is saved to the specified path.
+Transition Matrix (probability of transitioning from row state to column state):
+----------------------------------------------------------------------
+From/To   short          medium         long           
+----------------------------------------------------------------------
+short     0.308455    0.416361    0.275184    
+medium    0.267522    0.457837    0.274642    
+long      0.275620    0.427177    0.297202    

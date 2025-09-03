@@ -18,8 +18,8 @@ The `Data` folder is **not** included in the repository. You must create it manu
 ├── Data/
 │   ├── Audio_Inputs/
 │   ├── Audio_Outputs/
-│   └── Clean_Audio_Samples/
-│   └── Delayed_Audio_Samples/
+│   ├── Clean_Audio_Samples/
+│   ├── Delayed_Audio_Samples/
 │   └── Text_Files/
 ```
 

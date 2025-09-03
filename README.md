@@ -4,8 +4,7 @@
 
 ## Prerequisites
 
-- Python (recommended version: 3.8+)
-- pip (Python package manager)
+- Python (recommended version: 3.13)
 
 ## Installation
 

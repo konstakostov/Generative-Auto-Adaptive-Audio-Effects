@@ -249,3 +249,5 @@ fabric.properties
 
 # Custom Paths
 Data*
+.idea/copilot*
+.idea/material_theme*
